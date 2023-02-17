@@ -1,0 +1,20 @@
+gnn_params:
+  layer_type: "pna_layer"     # "dense_gin_layer", "pna_layer", "gin_layer"
+  output_dim: 128
+  num_layers: 3
+  readout_op: "lstm"          # "concat", "none", "lstm"
+  readout_type: "mean"        # "sum", "mean", "max", "min"
+  dropout: 0.
+  graph_norm: True
+  batch_norm: True
+  aggregators: "max"          # "mean max min std"
+  scalers: "identity amplification attenuation"
+  avg_d: 4
+  towers: 1
+  pretrans_layers: 1
+  posttrans_layers: 1
+  divide_input: True
+  residual: False
+classification_params:
+  num_layers: 3
+  hidden_dim: 128
